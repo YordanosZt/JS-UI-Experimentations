@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 400px;
+    max-width: 1088px;
+    border: 2px solid red;
+    margin-inline: auto;
+    margin-block: 20px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 768px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 425px;
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        width: 375px;
+    }
+}
+@media (max-width: 375px) {
+    .container {
+        width: 320px;
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        width: 100%;
+    }
+}
+
+/* 
+    320
+    375
+    425
+    768
+    1024
+    1366
+*/

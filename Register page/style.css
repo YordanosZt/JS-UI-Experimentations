@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #222;
+    overflow: hidden;
+}
+
+.container {
+    perspective: 800px;
+}
+
+.container.active > .form {
+    transform: rotateY(180deg);
+}
+
+.toggle-btn {
+    width: 45px;
+    height: 20px;
+    background-color: white;
+    display: block;
+    margin: 20px auto;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-color: goldenrod;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.toggle-btn.active::after {
+    left: 25px;
+}
+
+.form {
+    min-height: 513px;
+    min-width: 366px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.6s;
+}
+
+.login,
+.signup {
+    position: absolute;
+    top: 0;
+    /* min-width: 100%;
+    min-height: 100%; */
+    backface-visibility: hidden;
+    background-color: #1e3050;
+    border-radius: 10px;
+}
+
+.login {
+    padding: 30px;
+    left: 0;
+}
+
+h1 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.login .username,
+.password,
+.email {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 300px;
+    border: 2px solid firebrick;
+    margin-block: 20px;
+    border-radius: 30px;
+    padding: 0 15px;
+}
+
+.login .username input,
+.password input,
+.email input {
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.login .username i,
+.password i,
+.email i {
+    color: white;
+    font-size: 14px;
+}
+
+.show {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.show:hover {
+    color: firebrick;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.remember-me label {
+    font-size: 14px;
+    margin-inline: 7px auto;
+}
+
+.remember-me a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+.remember-me a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    background-color: firebrick;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 15px 0;
+    margin-top: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #631111;
+}
+
+.signup {
+    transform: rotateY(180deg);
+    padding: 30px;
+    right: 0;
+}
+
+.signup .name {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.signup .name input {
+    padding: 0 20px;
+    height: 50px;
+    width: 140px;
+    background-color: transparent;
+    border: 2px solid firebrick;
+    border-radius: 30px;
+    outline: none;
+    color: white;
+}
+
+.terms {
+    color: white;
+}
+
+.terms p {
+    font-size: 14px;
+    margin-left: 7px;
+    display: inline;
+}
+
+.terms p span {
+    color: firebrick;
+    cursor: pointer;
+}
+
+.terms p span:hover {
+    text-decoration: underline;
+}

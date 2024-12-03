@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #222;
+}
+
+h1 {
+    font-size: 4em;
+    color: white;
+    cursor: default;
+}
+
+.cursor-follow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: royalblue;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 30px royalblue;
+    pointer-events: none;
+    transition: width 0.1s;
+    transition: height 0.1s;
+    /* transition: scale 0.3s; */
+}
+
+.cursor-follow.active {
+    /* scale: 4; */
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-color: royalblue;
+}

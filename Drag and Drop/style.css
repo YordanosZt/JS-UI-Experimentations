@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    list-style: none;
+    color: #ddd;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #222;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.container01,
+.container02 {
+    border: 2px dashed white;
+    /* min-height: 90px; */
+    min-height: 283px;
+    min-width: 200px;
+}
+
+.list {
+    background-color: white;
+    color: black;
+    margin: 20px;
+    padding: 10px 50px;
+    border-radius: 5px;
+}
